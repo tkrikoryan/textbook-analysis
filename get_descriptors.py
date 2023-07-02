@@ -128,6 +128,7 @@ def main():
         res.extend(run_depparse(possible_marks, word2dem, famous_people, 
             textbook_lines, title, nlp))
     outfile = codecs.open(os.path.join(args.output_dir, 'people_descriptors.csv'), 'w', encoding='utf-8')
+    outfile.write('token_ID,filename,ca,category,word,POS,rel\n') # add the column names for the file
     for tup in res: 
         if type(tup[3]) == list or type(tup[3]) == set: 
             for d in tup[3]: 
