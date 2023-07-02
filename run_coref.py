@@ -70,7 +70,7 @@ def main():
         with codecs.open(os.path.join(args.output_dir, title), 'w', encoding='utf-8') as f:
             for line in textbook_lines:
                 doc = nlp(line)
-                f.write(get_resolved(doc, doc._.coref_clusters) + '\n')
+                f.write(get_resolved(doc, doc._.coref_clusters) + '.txt\n')
 
 if __name__ == '__main__':
     main()
