@@ -106,10 +106,13 @@ def calculate_scores(agencies, powers, val_dict, aro_dict, \
         for row in reader:
             ID = row['token_ID']
             title = row['filename']
-            category = row['word']
-            word = row['POS']
-            pos = row['rel']
-            relation = row[None][0]
+            ca = row['ca']
+            category = row['category']
+            word = row['word']
+            pos = row['POS']
+            relation = row['rel']
+            # print('Only rel: ',relation)
+            # print('ROW', row)
             # print("Verbs and relation", pos, relation)
             # print("ALL THE POWERS", powers)
             # print(row)
