@@ -10,6 +10,9 @@ import pandas as pd
 from scipy.stats import zscore
 import math
 import warnings
+import nltk
+nltk.download('wordnet')
+
 from pandas.core.common import SettingWithCopyWarning
 
 warnings.simplefilter(action="ignore", category=SettingWithCopyWarning)
